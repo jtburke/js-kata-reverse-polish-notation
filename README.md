@@ -3,8 +3,14 @@ https://en.wikipedia.org/wiki/Reverse_Polish_notation
 
 The input for the function should be a space separated string.
 
+```
+End date: Friday 3rd July (3 weeks)
+```
+
 # End Goal Test
 `1` `2` `+` `4` `*` `5` `+` `3` `-` = `14`
+
+However feel free to take it as far as you like.
 
 # Baby step rules
 1. Start a timer (3 minutes suggested but whatever you're comfortable with)
