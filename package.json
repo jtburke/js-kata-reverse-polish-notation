@@ -7,10 +7,13 @@
     "url": "https://github.atcloud.io/JohnTerrance-Burke/code-dojo-reverse-polish-notation"
   },
   "devDependencies": {
-    "jasmine-core": "^2.3.4",
-    "karma": "^0.12.36",
-    "karma-babel-preprocessor": "^5.2.1",
-    "karma-chrome-launcher": "^0.1.12",
-    "karma-jasmine": "^0.3.5"
+    "babel": "^5.5.6",
+    "babel-core": "^5.5.6",
+    "mocha": "^2.2.5",
+    "node-libs-browser": "^0.5.2",
+    "should": "^6.0.3"
+  },
+  "scripts": {
+    "test": "mocha --compilers js:babel/register"
   }
 }
