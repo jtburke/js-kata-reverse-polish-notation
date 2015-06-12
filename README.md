@@ -24,8 +24,8 @@ However feel free to take it as far as you like.
 6. Goto 1 `goto statements ftw`
 
 # Additional Challenges
-Smallest steps - Create the most tests (must show forward progress of code between commits).  
-ES6 - Use the most ES6 features.
+* Smallest steps - Create the most tests (must show forward progress of code between commits).  
+* ES6 - Use the most ES6 features.
 
 # Setup/Running Tests
 Install dependencies
