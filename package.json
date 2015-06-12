@@ -1,0 +1,16 @@
+{
+  "name": "code-dojo-reverse-polish-notation",
+  "version": "1.0.0",
+  "description": "Implementation of Reverse Polish Notation in Javascript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.atcloud.io/JohnTerrance-Burke/code-dojo-reverse-polish-notation"
+  },
+  "devDependencies": {
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.12.36",
+    "karma-babel-preprocessor": "^5.2.1",
+    "karma-chrome-launcher": "^0.1.12",
+    "karma-jasmine": "^0.3.5"
+  }
+}
