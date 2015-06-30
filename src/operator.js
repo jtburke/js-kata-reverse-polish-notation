@@ -4,7 +4,14 @@ class Operator {
 
 export class Add {
     evaluate() {
-        return this.left + this.right
+        let left
+        if (this.left instanceof Add) {
+            left = this.left.evaluate()
+        }  else {
+            left = this.left
+        }
+
+        return left + this.right
     }
 }
 
