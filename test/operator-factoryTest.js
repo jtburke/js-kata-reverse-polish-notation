@@ -10,4 +10,8 @@ describe('Operator Factory', () => {
     it('should return an subtract operator for "-"', () => {
         OperatorFactory.create("-").should.be.a.instanceOf(Subtract)
     })
+
+    it('should return an multiply operator for "*"', () => {
+        OperatorFactory.create("*").should.be.a.instanceOf(Multiply)
+    })
 })

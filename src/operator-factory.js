@@ -9,5 +9,9 @@ export class OperatorFactory {
         if (input === '-') {
             return new Subtract()
         }
+
+        if (input === '*') {
+            return new Multiply()
+        }
     }
 }
