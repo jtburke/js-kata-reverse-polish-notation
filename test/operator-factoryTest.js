@@ -6,4 +6,8 @@ describe('Operator Factory', () => {
     it('should return an add operator for "+"', () => {
         OperatorFactory.create("+").should.be.a.instanceOf(Add)
     })
+
+    it('should return an subtract operator for "-"', () => {
+        OperatorFactory.create("-").should.be.a.instanceOf(Subtract)
+    })
 })

@@ -1,7 +1,13 @@
 import {Add, Subtract, Multiply} from '../src/operator';
 
 export class OperatorFactory {
-    static create() {
-        return new Add()
+    static create(input) {
+        if (input === '+') {
+            return new Add()
+        }
+
+        if (input === '-') {
+            return new Subtract()
+        }
     }
 }
