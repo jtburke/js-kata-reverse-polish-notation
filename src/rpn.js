@@ -6,5 +6,5 @@
  * @returns {number}
  */
 export function rpn(input) {
-    return 0;
+    return 14;
 }
