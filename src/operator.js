@@ -23,14 +23,14 @@ export class Add extends Operator {
     }
 }
 
-export class Subtract {
-    evaluate() {
-        return this.left - this.right
+export class Subtract extends Operator {
+    operate(left, right) {
+        return left - right
     }
 }
 
-export class Multiply {
-    evaluate() {
-        return this.left * this.right
+export class Multiply extends Operator {
+    operate(left, right) {
+        return left * right
     }
 }
