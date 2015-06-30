@@ -1,23 +1,24 @@
 class Operator {
-
-}
-
-export class Add {
     evaluate() {
-        let left
+        let left, right
         if (this.left instanceof Add) {
             left = this.left.evaluate()
         }  else {
             left = this.left
         }
 
-        let right
         if (this.right instanceof Add) {
             right = this.right.evaluate()
         }  else {
             right = this.right
         }
 
+        return this.operate(left, right)
+    }
+}
+
+export class Add extends Operator {
+    operate(left, right) {
         return left + right
     }
 }
