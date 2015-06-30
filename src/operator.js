@@ -11,7 +11,14 @@ export class Add {
             left = this.left
         }
 
-        return left + this.right
+        let right
+        if (this.right instanceof Add) {
+            right = this.right.evaluate()
+        }  else {
+            right = this.right
+        }
+
+        return left + right
     }
 }
 

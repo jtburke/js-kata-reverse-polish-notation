@@ -21,7 +21,7 @@ describe('Operators', () => {
             add.evaluate().should.equal(13)
         })
 
-        it('should add nested operator', () => {
+        it('should add left nested operator', () => {
             let a1 = new Add()
             let a2 = new Add()
 
@@ -32,6 +32,19 @@ describe('Operators', () => {
             a1.right = 3
 
             a1.evaluate().should.equal(11)
+        })
+
+        it('should add right nested operator', () => {
+            let a1 = new Add()
+            let a2 = new Add()
+
+            a2.left = 8
+            a2.right = 3
+
+            a1.left = 9
+            a1.right = a2
+
+            a1.evaluate().should.equal(20)
         })
     })
 
