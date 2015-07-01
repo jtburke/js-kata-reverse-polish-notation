@@ -1,10 +1,10 @@
 import * as should from '../node_modules/should/should.js';
-import {Add, Subtract, Multiply} from '../src/operator';
+import {Operator} from '../src/operator';
 
 describe('Operators', () => {
     describe('Add', () => {
         it('should add 2 operands', () => {
-            let add = new Add()
+            let add = new Operator((a,b) => a + b)
 
             add.left = 1
             add.right = 2
@@ -13,7 +13,7 @@ describe('Operators', () => {
         })
 
         it('should add 2 different operands', () => {
-            let add = new Add()
+            let add = new Operator((a,b) => a + b)
 
             add.left = 11
             add.right = 2
@@ -22,8 +22,8 @@ describe('Operators', () => {
         })
 
         it('should add left nested operator', () => {
-            let a1 = new Add()
-            let a2 = new Add()
+            let a1 = new Operator((a,b) => a + b)
+            let a2 = new Operator((a,b) => a + b)
 
             a2.left = 3
             a2.right = 5
@@ -35,8 +35,8 @@ describe('Operators', () => {
         })
 
         it('should add right nested operator', () => {
-            let a1 = new Add()
-            let a2 = new Add()
+            let a1 = new Operator((a,b) => a + b)
+            let a2 = new Operator((a,b) => a + b)
 
             a2.left = 8
             a2.right = 3
@@ -50,7 +50,7 @@ describe('Operators', () => {
 
     describe('Subtract', () => {
         it('should subtract 2 operands', () => {
-            let sub = new Subtract()
+            let sub = new Operator((a,b) => a - b)
 
             sub.left = 7
             sub.right = 2
@@ -59,7 +59,7 @@ describe('Operators', () => {
         })
 
         it('should subtract 2 different operands', () => {
-            let sub = new Subtract()
+            let sub = new Operator((a,b) => a - b)
 
             sub.left = 8
             sub.right = 22
@@ -70,7 +70,7 @@ describe('Operators', () => {
 
     describe('Multiply', () => {
         it('should multiply 2 operands', () => {
-            let multiply = new Multiply()
+            let multiply = new Operator((a,b) => a * b)
 
             multiply.left = 7
             multiply.right = 2
@@ -79,7 +79,7 @@ describe('Operators', () => {
         })
 
         it('should multiply 2 operands', () => {
-            let multiply = new Multiply()
+            let multiply = new Operator((a,b) => a * b)
 
             multiply.left = 10
             multiply.right = 10

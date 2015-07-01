@@ -1,36 +1,12 @@
-class Operator {
+export class Operator {
+    constructor (operation) {
+        this.operation = operation
+    }
+
     evaluate() {
-        let left, right
-        if (this.left instanceof Operator) {
-            left = this.left.evaluate()
-        }  else {
-            left = this.left
-        }
+        const left = (this.left instanceof Operator) ? this.left.evaluate() : this.left,
+              right = (this.right instanceof Operator) ? this.right.evaluate() : this.right
 
-        if (this.right instanceof Operator) {
-            right = this.right.evaluate()
-        }  else {
-            right = this.right
-        }
-
-        return this.operate(left, right)
-    }
-}
-
-export class Add extends Operator {
-    operate(left, right) {
-        return left + right
-    }
-}
-
-export class Subtract extends Operator {
-    operate(left, right) {
-        return left - right
-    }
-}
-
-export class Multiply extends Operator {
-    operate(left, right) {
-        return left * right
+        return this.operation(left, right)
     }
 }

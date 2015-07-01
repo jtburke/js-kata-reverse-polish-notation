@@ -4,7 +4,7 @@ import sinonChai from '../node_modules/sinon-chai/lib/sinon-chai'
 
 import {MathTreeFactory} from '../src/math-tree-factory'
 import {Parser} from '../src/parser'
-import {Add, Subtract} from '../src/operator'
+import {Operator} from '../src/operator'
 
 chai.Should()
 chai.use(sinonChai)
@@ -17,8 +17,8 @@ describe('Math Tree Factory', () => {
         stub.withArgs('1').returns(1)
         stub.withArgs('2').returns(2)
         stub.withArgs('3').returns(3)
-        stub.withArgs('+').returns(new Add())
-        stub.withArgs('-').returns(new Subtract())
+        stub.withArgs('+').returns(new Operator())
+        stub.withArgs('-').returns(new Operator())
     })
 
     afterEach(() => {
@@ -28,15 +28,15 @@ describe('Math Tree Factory', () => {
     it('should parse the input', function () {
         stub.withArgs('1').returns(1)
         stub.withArgs('2').returns(2)
-        stub.withArgs('+').returns(new Add())
+        stub.withArgs('+').returns(new Operator())
 
         MathTreeFactory.parse('1 2 +').should.eql([
-            1, 2, new Add()
+            1, 2, new Operator()
         ]);
     })
 
     it('should return a tree for "1 2 +"', () => {
-        const add = new Add()
+        const add = new Operator()
         add.left = 1
         add.right = 2
 
@@ -44,7 +44,7 @@ describe('Math Tree Factory', () => {
     })
 
     it('should return a tree for "2 3 -"', () => {
-        const sub = new Subtract()
+        const sub = new Operator()
         sub.left = 2
         sub.right = 3
 
@@ -52,11 +52,11 @@ describe('Math Tree Factory', () => {
     })
 
     it('should return a tree for 1 1 + 2 -', () => {
-        const add = new Add()
+        const add = new Operator()
         add.left = 1
         add.right = 1
 
-        const sub = new Subtract()
+        const sub = new Operator()
         sub.left = add
         sub.right = 2
 

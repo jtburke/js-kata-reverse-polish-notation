@@ -1,17 +1,17 @@
-import {Add, Subtract, Multiply} from '../src/operator';
+import {Operator} from '../src/operator';
 
 export class OperatorFactory {
     static create(input) {
         if (input === '+') {
-            return new Add()
+            return new Operator((a, b) => a + b)
         }
 
         if (input === '-') {
-            return new Subtract()
+            return new Operator((a, b) => a - b)
         }
 
         if (input === '*') {
-            return new Multiply()
+            return new Operator((a, b) => a * b)
         }
     }
 }
