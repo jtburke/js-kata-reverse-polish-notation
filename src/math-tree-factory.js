@@ -7,10 +7,23 @@ export class MathTreeFactory {
 
     static createFromRPN(input) {
         let parsed = MathTreeFactory.parse(input)
+        let stack = []
 
-        parsed[2].left = parsed[0]
-        parsed[2].right = parsed[1]
+        for (let i = 0; i < parsed.length; i++) {
+            let v = parsed[i]
 
-        return parsed[2]
+            if (!isNaN(v)) {
+                stack.push(v)
+            } else {
+                v.right = stack.pop()
+                v.left = stack.pop()
+
+                if (i === parsed.length - 1) {
+                    return v // root
+                } else {
+                    stack.push(v)
+                }
+            }
+        }
     }
 }
