@@ -1,13 +1,13 @@
 class Operator {
     evaluate() {
         let left, right
-        if (this.left instanceof Add) {
+        if (this.left instanceof Operator) {
             left = this.left.evaluate()
         }  else {
             left = this.left
         }
 
-        if (this.right instanceof Add) {
+        if (this.right instanceof Operator) {
             right = this.right.evaluate()
         }  else {
             right = this.right

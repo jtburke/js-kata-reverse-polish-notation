@@ -36,7 +36,7 @@ describe('Math Tree Factory', () => {
     })
 
     it('should return a tree for "1 2 +"', () => {
-        var add = new Add()
+        const add = new Add()
         add.left = 1
         add.right = 2
 
@@ -44,7 +44,7 @@ describe('Math Tree Factory', () => {
     })
 
     it('should return a tree for "2 3 -"', () => {
-        var sub = new Subtract()
+        const sub = new Subtract()
         sub.left = 2
         sub.right = 3
 
@@ -52,11 +52,11 @@ describe('Math Tree Factory', () => {
     })
 
     it('should return a tree for 1 1 + 2 -', () => {
-        var add = new Add()
+        const add = new Add()
         add.left = 1
         add.right = 1
 
-        var sub = new Subtract()
+        const sub = new Subtract()
         sub.left = add
         sub.right = 2
 
