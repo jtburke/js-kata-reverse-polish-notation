@@ -1,5 +1,5 @@
-import * as should from '../node_modules/should/should.js';
-import {Operator} from '../src/operator';
+import * as should from '../node_modules/should/should.js'
+import {Operator} from '../src/operator'
 
 describe('Operators', () => {
     describe('Add', () => {

@@ -1,4 +1,4 @@
-import {Operator} from '../src/operator';
+import {Operator} from '../src/operator'
 
 export class OperatorFactory {
     static create(input) {

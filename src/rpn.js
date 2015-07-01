@@ -8,5 +8,5 @@ import {MathTreeFactory} from './math-tree-factory'
  * @returns {number}
  */
 export function rpn(input) {
-    return MathTreeFactory.createFromRPN(input).evaluate();
+    return MathTreeFactory.createFromRPN(input).evaluate()
 }

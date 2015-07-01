@@ -32,7 +32,7 @@ describe('Math Tree Factory', () => {
 
         MathTreeFactory.parse('1 2 +').should.eql([
             1, 2, new Operator()
-        ]);
+        ])
     })
 
     it('should return a tree for "1 2 +"', () => {

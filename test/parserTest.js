@@ -2,8 +2,8 @@ import chai from '../node_modules/chai/chai'
 import sinon from '../node_modules/sinon/lib/sinon'
 import sinonChai from '../node_modules/sinon-chai/lib/sinon-chai'
 
-import {OperatorFactory} from '../src/operator-factory';
-import {Parser} from '../src/parser';
+import {OperatorFactory} from '../src/operator-factory'
+import {Parser} from '../src/parser'
 
 chai.Should()
 chai.use(sinonChai)
