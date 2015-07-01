@@ -6,8 +6,8 @@ export class MathTreeFactory {
     }
 
     static createFromRPN(input) {
-        let parsed = MathTreeFactory.parse(input)
-        let stack = []
+        const parsed = MathTreeFactory.parse(input),
+              stack = []
 
         for (let i = 0; i < parsed.length; i++) {
             let v = parsed[i]
