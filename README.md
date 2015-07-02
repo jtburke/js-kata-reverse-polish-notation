@@ -8,7 +8,7 @@ The input for the function should be a space separated string.
 
 However feel free to take it as far as you like.
 
-# 
+# See it done or do it yourself?
 You can watch me implement this at 12x speed: https://youtu.be/UL0jsN4uPow  
 If you'd like to do this kata yourself checkout the [master branch](https://github.com/jtburke/js-kata-reverse-polish-notation/tree/master)
 
